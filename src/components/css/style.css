@@ -119,8 +119,8 @@ body {
 }
 
 .game__all-girl-image {
-  width: 1200px;
-  height: 456px;
+  width: 600;
+  height: 228px;
 }
 
 @media (max-width: 200px) {
