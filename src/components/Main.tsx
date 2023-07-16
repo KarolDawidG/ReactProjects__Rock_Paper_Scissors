@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import '../style.css';
 import { IndexTemplate } from './Index';
 import { PrzegranaTemplate } from './views/game-views/Przegrana';
@@ -92,12 +92,7 @@ export const Main = () => {
     init();
   };
 
-  const handlePlayAgain = () => {
-    setWynik('');
-    setOpcjaNumber(null);
-    setR(null);
-    render('index', { punkty, punktyPC });
-  };
+ 
 
   useEffect(() => {
     init();
@@ -109,18 +104,36 @@ export const Main = () => {
       {wynik === '' && (
         <IndexTemplate handleGra={handleGra} punkty={punkty} punktyPC={punktyPC} handleKasuj={handleKasuj} />
       )}
-      {wynik === 'przegrana' && <PrzegranaTemplate punkty={punkty} punktyPC={punktyPC} opcjaNumber={opcjaNumber} R={R}/>}
-      {wynik === 'remis' && <RemisTemplate punkty={punkty} punktyPC={punktyPC} opcjaNumber={opcjaNumber} R={R}/>}
-      {wynik === 'wygrana' && <WygranaTemplate punkty={punkty} punktyPC={punktyPC} opcjaNumber={opcjaNumber} R={R}/>}
-      {wynik !== '' && (
-        <p className="result__play-again">
-          Naciśnij{' '}
-          <button className="result__play-again-button" onClick={handlePlayAgain}>
-            Tutaj
-          </button>
-          , aby zagrać jeszcze raz!
-        </p>
-      )}
+      {wynik === 'przegrana' && <PrzegranaTemplate
+                punkty={punkty}
+                punktyPC={punktyPC}
+                opcjaNumber={opcjaNumber}
+                R={R}
+                setWynik={setWynik}
+                setOpcjaNumber={setOpcjaNumber}
+                setR={setR}
+                render={render}
+                  />}
+      {wynik === 'remis' && <RemisTemplate 
+                punkty={punkty}
+                punktyPC={punktyPC}
+                opcjaNumber={opcjaNumber}
+                R={R}
+                setWynik={setWynik}
+                setOpcjaNumber={setOpcjaNumber}
+                setR={setR}
+                render={render}
+                  />}
+      {wynik === 'wygrana' && <WygranaTemplate 
+                punkty={punkty}
+                punktyPC={punktyPC}
+                opcjaNumber={opcjaNumber}
+                R={R}
+                setWynik={setWynik}
+                setOpcjaNumber={setOpcjaNumber}
+                setR={setR}
+                render={render}
+                  />}
     </main>
   );
 };
