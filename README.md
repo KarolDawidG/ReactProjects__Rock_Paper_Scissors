@@ -1,15 +1,17 @@
-I present my small game project in typescript and react.
-If you want to view the game go to the link:
+## I present my small game project in typescript and react.
+
+### `If you want to view the game go to the link:`
+
  - https://react-g-rock-paper-scissors.netlify.app/
 
-Soon in the project will be added:
+### `Soon in the project will be added:`
 - the ability to play multiplayer;
 - project logic will be improved;
 - the entire structure will be improved in order to improve reception, e.g. on mobile devices;
 - hero selection will be added;
 - maybe more completely unnecessary features will be added in such a trivial game.
 
-STAY TUNED
+### STAY TUNED
 
 ## Available Scripts
 
