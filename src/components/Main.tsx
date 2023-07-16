@@ -26,10 +26,10 @@ export const Main = () => {
       (opcjaNumber === 2 && R === 3) ||
       (opcjaNumber === 3 && R === 1)
     ) {
-      setWynik('wygrana');
+      setWynik('przegrana');
       wygrana(opcjaNumber, R);
     } else {
-      setWynik('przegrana');
+      setWynik('wygrana');
       przegrana(opcjaNumber, R);
     }
 
