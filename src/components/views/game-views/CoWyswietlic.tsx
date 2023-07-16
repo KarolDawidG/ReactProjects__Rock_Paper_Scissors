@@ -1,13 +1,13 @@
 import React from 'react';
 import '../../css/game-views.css'
 
-interface CoWyswietlic {
+interface CoWyswietlicTemplateProps {
   opcjaNumber: number | null;
   R: number | null;
 }
 
-export const CoWyswietlic: React.FC<CoWyswietlic> = ({  opcjaNumber, R}) => {
-  const coWyswietlic = (opcja: any) => {
+export const CoWyswietlic: React.FC<CoWyswietlicTemplateProps> = ({  opcjaNumber, R}) => {
+  const whatToDisplay = (opcja: any) => {
     if (opcja === 1) {
       return {
         nazwa: 'Papier',
@@ -26,8 +26,8 @@ export const CoWyswietlic: React.FC<CoWyswietlic> = ({  opcjaNumber, R}) => {
     }
   };
 
-  const wyborGracza = coWyswietlic(opcjaNumber);
-  const wyborKomputera = coWyswietlic(R);
+  const wyborGracza = whatToDisplay(opcjaNumber);
+  const wyborKomputera = whatToDisplay(R);
   return (
     <>
       <div id="wygrana">
