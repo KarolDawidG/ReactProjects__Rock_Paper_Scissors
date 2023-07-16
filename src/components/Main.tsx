@@ -27,11 +27,12 @@ export const Main = () => {
       (opcjaNumber === 3 && R === 1)
     ) {
       setWynik('przegrana');
-      wygrana(opcjaNumber, R);
+      przegrana(opcjaNumber, R);
     } else {
       setWynik('wygrana');
-      przegrana(opcjaNumber, R);
+      wygrana(opcjaNumber, R);
     }
+
 
     const wyborGraczaElement = document.getElementById('wyborGracza');
     const wyborKomputeraElement = document.getElementById('wyborKomputera');
@@ -46,17 +47,17 @@ export const Main = () => {
   };
 
   const wygrana = (opcjaNumber: any, R: any) => {
-    setPunkty((prevPunkty) => prevPunkty + 1);
+    setPunkty((punkty) => punkty + 1);
     setOpcjaNumber(opcjaNumber);
     setR(R);
-    render('wygrana', { punkty, punktyPC, opcjaNumber, R });
+    render('wygrana', { punkty, opcjaNumber, R });
   };
 
   const przegrana = (opcjaNumber: any, R: any) => {
-    setPunktyPC((prevPunktyPC) => prevPunktyPC + 1);
+    setPunktyPC((punktyPC) => punktyPC + 1);
     setOpcjaNumber(opcjaNumber);
     setR(R);
-    render('przegrana', { punkty, punktyPC, opcjaNumber, R });
+    render('przegrana', {  punktyPC, opcjaNumber, R });
   };
 
   const remis = (opcjaNumber: any, R: any) => {
