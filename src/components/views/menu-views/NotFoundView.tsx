@@ -1,5 +1,5 @@
 
-import { Button } from '../../../Button';
+import { Button } from '../../utils/Button';
 import '../../../style.css';
 
 

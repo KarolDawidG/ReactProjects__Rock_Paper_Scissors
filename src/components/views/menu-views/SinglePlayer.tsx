@@ -1,7 +1,7 @@
 
 import '../../../style.css';
 import {Main} from '../../Main';
-import { Button } from '../../../Button';
+import { Button } from '../../utils/Button';
 
 
 export const SinglePlayer = () => {

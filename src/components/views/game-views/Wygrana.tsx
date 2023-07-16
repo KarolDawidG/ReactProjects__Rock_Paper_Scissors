@@ -1,6 +1,6 @@
 import React from 'react';
 import { init } from '../../logic/init';
-import '../../../style.css';
+import '../../css/game-views.css'
 
 interface WygranaTemplateProps {
   punkty: number;

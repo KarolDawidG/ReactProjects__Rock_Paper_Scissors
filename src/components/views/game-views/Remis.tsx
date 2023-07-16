@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../style.css';
+import '../../css/game-views.css'
 
 interface RemisTemplateProps {
   punkty: number;

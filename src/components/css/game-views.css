@@ -1,0 +1,45 @@
+/* Wynik - Remis */
+.result__remis {
+  font-size: 24px;
+  color: #ffeb3b;
+  margin-bottom: 10px;
+}
+
+.result__przegrana {
+  font-size: 24px;
+  color: grey;
+  margin-bottom: 10px;
+}
+
+/* Wynik - Wygrana */
+.result__wygrana {
+  font-size: 24px;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+/* Wynik - Wybory */
+.result__choice {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Wynik - Punkty */
+.result__points {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.game__girl-image {
+  width: 300px;
+  height: 300px;
+}
+
+@media (max-width: 600px) {
+  .game__girl-image {
+    width: 40vw; /* Zajmuje 40% szerokości widoku */
+    height: auto; /* Proporcjonalna wysokość */
+    max-width: none; /* Usunięcie maksymalnej szerokości */
+    max-height: 40vh; /* Maksymalna wysokość wynosi 40% wysokości widoku */
+  }
+}

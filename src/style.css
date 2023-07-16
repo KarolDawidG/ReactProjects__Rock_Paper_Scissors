@@ -12,15 +12,6 @@ html, body {
   flex: 1;
 }
 
-.footer {
-  flex-shrink: 0;
-  text-align: center;
-  color: #999;
-  padding: 5px;
-  background-color: #222;
-}
-
-
 body {
   background-color: black;
   color: #fff;
@@ -45,19 +36,6 @@ body {
   text-align: center;
 }
 
-/* Wynik - Przegrana */
-.result__przegrana {
-  font-size: 24px;
-  color: #ff3d00;
-  margin-bottom: 1px;
-}
-
-/* Wynik - Wybory */
-.result__choice {
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
 /* Wynik - Play Again */
 .result__play-again {
   margin-top: 1px;
@@ -78,45 +56,6 @@ body {
 .result__play-again-button:hover {
   transform: scale(1.1);
 }
-
-/* Wynik - Punkty */
-.result__points {
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
-/* Wynik - Remis */
-.result__remis {
-  font-size: 24px;
-  color: #ffeb3b;
-  margin-bottom: 10px;
-}
-
-.result__przegrana {
-  font-size: 24px;
-  color: grey;
-  margin-bottom: 10px;
-}
-
-/* Wynik - Wygrana */
-.result__wygrana {
-  font-size: 24px;
-  color: #4caf50;
-  margin-bottom: 10px;
-}
-
-/* Stopka */
-.footer {
-  background-color: #333;
-  padding: 20px;
-}
-
-.footer__text {
-  font-size: 14px;
-  text-align: center;
-  margin: 0;
-}
-
 
 /* Nagłówek strony */
 /* Nagłówek strony */
@@ -173,48 +112,11 @@ body {
   margin-top: 20px;
 }
 
-.game__reset-button {
-  padding: 10px 20px;
-  font-size: 18px;
-  background-color: #ff4081;
-  color: #fff;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease-in-out;
-  text-decoration: none;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.game__reset-button:hover {
-  transform: scale(1.1);
-}
-
-
-.button-menu__options {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 
 .game__button-image {
   width: 100px;
   height: 100px;
 }
 
-.game__girl-image {
-  width: 300px;
-  height: 300px;
-}
 
-@media (max-width: 600px) {
-  .game__girl-image {
-    width: 40vw; /* Zajmuje 40% szerokości widoku */
-    height: auto; /* Proporcjonalna wysokość */
-    max-width: none; /* Usunięcie maksymalnej szerokości */
-    max-height: 40vh; /* Maksymalna wysokość wynosi 40% wysokości widoku */
-  }
-}
+

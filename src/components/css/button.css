@@ -1,0 +1,24 @@
+.button-menu__options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game__reset-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #ff4081;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.game__reset-button:hover {
+  transform: scale(1.1);
+}
