@@ -1,5 +1,4 @@
 import React from 'react';
-import { init } from '../../logic/init';
 import '../../css/game-views.css'
 
 interface WygranaTemplateProps {
