@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../../css/style.css';
+import { ImageMenu } from './ImageMenu';
 
 export const Menu = () => {
   return (
@@ -8,6 +9,7 @@ export const Menu = () => {
         <Link to="/single">
           <button className="game__reset-button">Single Player</button>
         </Link>
+        <ImageMenu/>
         <Link to="/multi">
           <button className="game__reset-button">Multiplayer</button>
         </Link>
