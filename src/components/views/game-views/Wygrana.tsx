@@ -8,9 +8,7 @@ interface WygranaTemplateProps {
 }
 
 export const WygranaTemplate: React.FC<WygranaTemplateProps> = ({ punkty, punktyPC }) => {
-  const handlePlayAgain = () => {
-    init(punkty, punktyPC);
-  };
+ 
 
   return (
     <div id="wygrana">
