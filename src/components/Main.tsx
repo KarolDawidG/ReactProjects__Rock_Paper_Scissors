@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import '../style.css';
 import { IndexTemplate } from './Index';
-import { PrzegranaTemplate } from './views/Przegrana';
-import { RemisTemplate } from './views/Remis';
-import { WygranaTemplate } from './views/Wygrana';
+import { PrzegranaTemplate } from './views/game-views/Przegrana';
+import { RemisTemplate } from './views/game-views/Remis';
+import { WygranaTemplate } from './views/game-views/Wygrana';
 import { init } from './logic/init';
 import { render } from './logic/render';
 
@@ -92,7 +92,7 @@ export const Main = () => {
 
   return (
     <main className="main">
-      <div id="container"></div>
+      
       {wynik === '' && (
         <IndexTemplate handleGra={handleGra} punkty={punkty} punktyPC={punktyPC} handleKasuj={handleKasuj} />
       )}

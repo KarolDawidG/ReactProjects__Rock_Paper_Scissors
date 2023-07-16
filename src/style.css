@@ -92,6 +92,12 @@ body {
   margin-bottom: 10px;
 }
 
+.result__przegrana {
+  font-size: 24px;
+  color: grey;
+  margin-bottom: 10px;
+}
+
 /* Wynik - Wygrana */
 .result__wygrana {
   font-size: 24px;
@@ -178,6 +184,8 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease-in-out;
   text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .game__reset-button:hover {
@@ -185,8 +193,11 @@ body {
 }
 
 
-
-
+.button-menu__options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 
 .game__button-image {
@@ -195,8 +206,8 @@ body {
 }
 
 .game__girl-image {
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
 }
 
 @media (max-width: 600px) {

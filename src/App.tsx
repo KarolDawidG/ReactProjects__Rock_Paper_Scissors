@@ -1,15 +1,24 @@
-
 import './style.css';
-import {Header} from './components/Header'
-import {Main} from './components/Main'
+import { Routes, Route} from 'react-router-dom';
+import {Header} from './components/Header';
 import { Footer } from './components/Footer';
+import { SinglePlayer } from './components/views/menu-views/SinglePlayer';
+import { NotFoundView } from './components/views/menu-views/NotFoundView';
+import { MultiPlayer } from './components/views/menu-views/MultiPlayer';
+import { Menu } from './components/views/menu-views/Menu';
 
 export const App = () => {
   return (
-    <div className="page-wrapper">
-      <Header/>
-      <Main />
-      <Footer/>
-    </div>
+    <>  
+        <Header/>
+        <Routes>
+            <Route path="/" element={<Menu/>} />
+            <Route path="/single" element={<SinglePlayer/>} />
+            <Route path="/multi" element={<MultiPlayer/>} />
+            <Route path="*" element={<NotFoundView/>} />
+        </Routes>
+        <Footer/>
+    </>
+
   );
-};
+}
