@@ -1,7 +1,7 @@
-import './style.css';
+import './components/css/style.css';
 import { Routes, Route} from 'react-router-dom';
-import {Header} from './components/Header';
-import { Footer } from './components/Footer';
+import {Header} from './components/views/page-views/Header';
+import { Footer } from './components/views/page-views/Footer';
 import { SinglePlayer } from './components/views/menu-views/SinglePlayer';
 import { NotFoundView } from './components/views/menu-views/NotFoundView';
 import { MultiPlayer } from './components/views/menu-views/MultiPlayer';

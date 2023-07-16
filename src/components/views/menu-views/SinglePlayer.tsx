@@ -1,7 +1,6 @@
-
-import '../../../style.css';
-import {Main} from '../../Main';
-import { Button } from '../../utils/Button';
+import '../../css/style.css';
+import {Main} from '../../logic/MainLogic';
+import { Button } from '../../utils/buttons/Button';
 
 
 export const SinglePlayer = () => {

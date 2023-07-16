@@ -1,7 +1,5 @@
-
-import { Button } from '../../utils/Button';
-import '../../../style.css';
-
+import { Button } from '../../utils/buttons/Button';
+import '../../css/style.css';
 
 export const NotFoundView = () => {
   return (

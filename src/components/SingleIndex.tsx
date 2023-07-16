@@ -1,12 +1,6 @@
 import React from 'react';
-import '../style.css';
-
-interface IndexTemplateProps {
-  handleGra: (opcja: number) => void;
-  punkty: number;
-  punktyPC: number;
-  handleKasuj: () => void;
-}
+import './css/style.css';
+import { IndexTemplateProps } from './utils/interface/IndexTemplateProps';
 
 export const IndexTemplate: React.FC<IndexTemplateProps> = ({ handleGra, punkty, punktyPC, handleKasuj }) => {
   return (

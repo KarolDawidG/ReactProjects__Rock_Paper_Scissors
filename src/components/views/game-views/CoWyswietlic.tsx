@@ -1,12 +1,10 @@
 import React from 'react';
 import '../../css/game-views.css'
+import { handlePlayAgainLogic } from '../../logic/handlePlayAgainLogic';
+import {GameInterfaceProps} from '../../utils/interface/GameInterfaceProps';
 
-interface CoWyswietlicTemplateProps {
-  opcjaNumber: number | null;
-  R: number | null;
-}
 
-export const CoWyswietlic: React.FC<CoWyswietlicTemplateProps> = ({  opcjaNumber, R}) => {
+export const CoWyswietlic: React.FC<GameInterfaceProps> = ({ setWynik, setOpcjaNumber, setR, render, punkty, punktyPC, opcjaNumber, R}) => {
   const whatToDisplay = (opcja: any) => {
     if (opcja === 1) {
       return {
@@ -28,9 +26,12 @@ export const CoWyswietlic: React.FC<CoWyswietlicTemplateProps> = ({  opcjaNumber
 
   const wyborGracza = whatToDisplay(opcjaNumber);
   const wyborKomputera = whatToDisplay(R);
+
+  const handlePlayAgain = () => handlePlayAgainLogic(setWynik, setOpcjaNumber, setR, render, punkty, punktyPC);
+
   return (
     <>
-      <div id="wygrana">
+      <div id="wygrana"onClick={handlePlayAgain}>
         <p>
           Wybrałeś {wyborGracza?.nazwa} zaś przeciwnik wybrał {wyborKomputera?.nazwa}!!
         </p>

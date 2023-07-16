@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import '../style.css';
-import { IndexTemplate } from './Index';
-import { PrzegranaTemplate } from './views/game-views/Przegrana';
-import { RemisTemplate } from './views/game-views/Remis';
-import { WygranaTemplate } from './views/game-views/Wygrana';
-import { init } from './logic/init';
-import { render } from './logic/render';
+import '../css/style.css';
+import { IndexTemplate } from '../SingleIndex';
+import { PrzegranaTemplate } from '../views/game-views/Przegrana';
+import { RemisTemplate } from '../views/game-views/Remis';
+import { WygranaTemplate } from '../views/game-views/Wygrana';
+import { init } from './init';
+import { render } from './render';
 
 export const Main = () => {
   const [punkty, setPunkty] = useState(0);
