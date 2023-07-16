@@ -31,8 +31,15 @@ export const CoWyswietlic: React.FC<CoWyswietlic> = ({  opcjaNumber, R}) => {
   return (
     <>
       <div id="wygrana">
-        <p>Wybrałeś {wyborGracza?.nazwa}zaś przeciwnik wybrał {wyborKomputera?.nazwa}!!</p>
-    </div>
+        <p>
+          Wybrałeś {wyborGracza?.nazwa} zaś przeciwnik wybrał {wyborKomputera?.nazwa}!!
+        </p>
+  
+        <img src={`/img/${wyborGracza?.obrazek}`} alt={wyborGracza?.nazwa} className="game__button-image" />
+        <span className="result__vs">VS</span>
+        <img src={`/img/${wyborKomputera?.obrazek}`} alt={wyborKomputera?.nazwa} className="game__button-image" />
+      </div>
     </>
   );
+  
 };
