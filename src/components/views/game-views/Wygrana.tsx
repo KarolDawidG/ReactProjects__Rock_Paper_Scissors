@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../css/game-views.css'
 import { CoWyswietlic } from './CoWyswietlic';
+import { Punkty } from './Punkty';
 
 interface WygranaTemplateProps {
   punkty: number;
@@ -10,23 +11,15 @@ interface WygranaTemplateProps {
 }
 
 export const WygranaTemplate: React.FC<WygranaTemplateProps> = ({ punkty, punktyPC, opcjaNumber, R }) => {
- 
-
   return (
   <>
       <CoWyswietlic opcjaNumber={opcjaNumber} R={R}/>
-      <div id="wygrana">
+    <div id="wygrana">
       <p className="result__wygrana">WYGRAŁEŚ !!!</p>
-      <img src="img/smg.png" alt="Obrazek" className="game__girl-image" />
-     
-      <p className="result__points">
-        Punkty: <span id="punkty">{punkty}</span>
-      </p>
-      <p className="result__points">
-        Punkty komputera: <span id="punktyPC">{punktyPC}</span>
-      </p>
+      <img src="img/happyGrey.jpg" alt="Obrazek" className="game__girl-image" />
+      <Punkty punkty={punkty} punktyPC={punktyPC}/>
     </div>
-  
+
   </>
   );
 };
