@@ -1,5 +1,3 @@
-import '../../css/style.css';
-
 export const ImageMenu = () => {
   return (
   <>

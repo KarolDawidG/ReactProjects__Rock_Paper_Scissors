@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../../css/button.css'
 
-export const Button = () => {
+export const MainPageButton = () => {
   return (
     <div className="menu">
       <div className="button-menu__options">

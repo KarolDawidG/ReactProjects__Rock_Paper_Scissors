@@ -1,4 +1,4 @@
-import '../css/style.css';
+import '../../css/style.css';
 
 export   const render = (templateId: string, data: { [key: string]: number }) => {
   const template = document.getElementById(templateId);
@@ -9,7 +9,7 @@ export   const render = (templateId: string, data: { [key: string]: number }) =>
 
     if (template instanceof HTMLTemplateElement) {
       const clone = document.importNode(template.content, true);
-
+      
       for (const key in data) {
         const element = clone.getElementById(key);
 
@@ -17,7 +17,7 @@ export   const render = (templateId: string, data: { [key: string]: number }) =>
           element.textContent = data[key].toString();
         }
       }
-
+    
       container.appendChild(clone);
     }
   }

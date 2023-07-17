@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../css/game-views.css'
-import { handlePlayAgainLogic } from '../../logic/handlePlayAgainLogic';
+import { handlePlayAgainLogic } from '../../logic/SingleLogic/handlePlayAgainLogic';
 import {GameInterfaceProps} from '../../utils/interface/GameInterfaceProps';
 
 

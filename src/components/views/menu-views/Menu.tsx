@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../../css/style.css';
-import { ImageMenu } from './ImageMenu';
+import { ImageMenu } from '../../utils/other/ImageMenu';
 
 export const Menu = () => {
   return (

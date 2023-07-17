@@ -1,14 +1,14 @@
 import '../../css/style.css';
-import {Main} from '../../logic/MainLogic';
-import { Button } from '../../utils/buttons/Button';
+import {MainLogic} from '../../logic/SingleLogic/MainLogic';
+import { MainPageButton } from '../../utils/buttons/MainPageButton';
 
 
 export const SinglePlayer = () => {
   return (
    <>
-       <Button/>
-    <div className="page-wrapper">
-        <Main />
+       <MainPageButton/>
+        <div className="page-wrapper">
+        <MainLogic />
     </div>
    </>
   );

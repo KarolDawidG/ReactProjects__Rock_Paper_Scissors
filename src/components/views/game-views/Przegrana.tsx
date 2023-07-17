@@ -1,8 +1,8 @@
 import React from 'react';
 import '../../css/game-views.css'
 import { CoWyswietlic } from './CoWyswietlic';
-import { Punkty } from './Punkty';
-import { handlePlayAgainLogic } from '../../logic/handlePlayAgainLogic';
+import { Punkty } from '../../utils/other/Punkty';
+import { handlePlayAgainLogic } from '../../logic/SingleLogic/handlePlayAgainLogic';
 import {GameInterfaceProps} from '../../utils/interface/GameInterfaceProps';
 
 export const PrzegranaTemplate: React.FC<GameInterfaceProps> = ({setWynik, setOpcjaNumber, setR, render, punkty, punktyPC, opcjaNumber, R }) => {
