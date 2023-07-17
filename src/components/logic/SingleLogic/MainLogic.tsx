@@ -66,9 +66,7 @@ export const MainLogic = () => {
     render('remis', { punkty, punktyPC, opcjaNumber, R });
   };
 
-  const losowanie = () => {
-    return Math.floor(Math.random() * 3) + 1;
-  };
+  const losowanie = () => Math.floor(Math.random() * 3) + 1;
 
   const mapOpcja = (opcja: number) => {
     switch (opcja) {
