@@ -3,7 +3,6 @@ import '../../css/game-views.css'
 import { handlePlayAgainLogic } from '../../logic/SingleLogic/handlePlayAgainLogic';
 import {GameInterfaceProps} from '../../utils/interface/GameInterfaceProps';
 
-
 export const CoWyswietlic: React.FC<GameInterfaceProps> = ({ setWynik, setOpcjaNumber, setR, render, punkty, punktyPC, opcjaNumber, R}) => {
   const whatToDisplay = (opcja: any) => {
     if (opcja === 1) {
@@ -32,13 +31,14 @@ export const CoWyswietlic: React.FC<GameInterfaceProps> = ({ setWynik, setOpcjaN
   return (
     <>
       <div id="wygrana"onClick={handlePlayAgain}>
-        <p>
+        <p className='text'>
           Wybrałeś {wyborGracza?.nazwa} zaś przeciwnik wybrał {wyborKomputera?.nazwa}!!
         </p>
-  
-        <img src={`/img/${wyborGracza?.obrazek}`} alt={wyborGracza?.nazwa} className="game__button-image" />
-        <span className="result__vs">VS</span>
-        <img src={`/img/${wyborKomputera?.obrazek}`} alt={wyborKomputera?.nazwa} className="game__button-image" />
+          <div className='versus'>
+              <img src={`/img/${wyborGracza?.obrazek}`} alt={wyborGracza?.nazwa} className="game__button-image-left" />
+                  <span className="result__vs">VS</span>
+              <img src={`/img/${wyborKomputera?.obrazek}`} alt={wyborKomputera?.nazwa} className="game__button-image-right" />
+          </div>
       </div>
     </>
   );

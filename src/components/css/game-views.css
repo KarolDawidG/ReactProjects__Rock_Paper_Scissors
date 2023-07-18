@@ -2,20 +2,20 @@
 .result__remis {
   font-size: 24px;
   color: #ffeb3b;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .result__przegrana {
   font-size: 24px;
   color: grey;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 /* Wynik - Wygrana */
 .result__wygrana {
   font-size: 24px;
   color: #4caf50;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 /* Wynik - Wybory */
@@ -26,13 +26,92 @@
 
 /* Wynik - Punkty */
 .result__points {
-  font-size: 16px;
-  margin-bottom: 5px;
+  animation: color-changes 1s linear infinite;
 }
+
+@keyframes color-changes {
+  0% {
+    color: green;
+  }
+  50% {
+    color: greenyellow;
+  }
+  100% {
+    color: green;
+  }
+}
+.result__points span {
+  animation: color-change 2s linear infinite;
+}
+
+@keyframes color-change {
+  0% {
+    color: blue;
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    color: blue;
+  }
+}
+
+
+
 
 .game__girl-image {
   width: 300px;
   height: 300px;
+}
+
+.versus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game__button-image {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+}
+
+.result__vs {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 15px;
+}
+
+.game__button-image-left {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  animation: rotate-left 1s alternate-reverse;
+}
+
+.game__button-image-right {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  animation: rotate-right 1s alternate-reverse;
+}
+
+@keyframes rotate-left {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate-right {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 600px) {

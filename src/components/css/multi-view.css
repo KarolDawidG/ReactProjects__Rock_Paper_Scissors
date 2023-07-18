@@ -1,0 +1,60 @@
+.main-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .text__main {
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0% {
+      color: red;
+    }
+    50% {
+      color: black;
+    }
+    100% {
+      color: red;
+    }
+  }
+  
+  .text {
+    animation: color-change 3s infinite;
+  }
+  
+  @keyframes color-change {
+    0% {
+      color: white;
+    }
+    50% {
+      color: pink;
+    }
+    100% {
+      color: red;
+    }
+  }
+  
+  .img-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+  }
+  
+  .multi-game__girl-image {
+    margin: 0 5px;
+    width: 300px;
+    height: 300px;
+  }
+  
+  @media (max-width: 768px) {
+    .multi-game__girl-image {
+      width: 80vw;
+      height: auto;
+      max-width: none;
+      max-height: 80vh;
+    }
+  }
+  

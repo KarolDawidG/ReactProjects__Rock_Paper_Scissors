@@ -1,5 +1,3 @@
-import '../../css/style.css';
-
 export   const render = (templateId: string, data: { [key: string]: number }) => {
   const template = document.getElementById(templateId);
   const container = document.getElementById('container');

@@ -1,6 +1,5 @@
 import React from 'react';
 import { MainPageButton } from '../../utils/buttons/MainPageButton';
-import '../../css/style.css';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { SecondWin } from '../../views/multi-views/SecondWin';

@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import '../../css/style.css';
 import { IndexTemplate } from '../../SingleIndex';
 import { PrzegranaTemplate } from '../../views/game-views/Przegrana';
 import { RemisTemplate } from '../../views/game-views/Remis';
