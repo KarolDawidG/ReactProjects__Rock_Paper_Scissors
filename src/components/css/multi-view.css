@@ -51,10 +51,10 @@
   
   @media (max-width: 768px) {
     .multi-game__girl-image {
-      width: 80vw;
+      width: 40vw;
       height: auto;
       max-width: none;
-      max-height: 80vh;
+      max-height: 40vh;
     }
   }
   
