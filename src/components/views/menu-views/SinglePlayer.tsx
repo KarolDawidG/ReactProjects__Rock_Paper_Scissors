@@ -1,12 +1,12 @@
 import '../../css/style.css';
 import {MainLogic} from '../../logic/SingleLogic/MainLogic';
-import { MainPageButton } from '../../utils/buttons/MainPageButton';
+import { RedirectBtn } from '../../utils/buttons/RedirectBtn';
 
 
 export const SinglePlayer = () => {
   return (
    <>
-       <MainPageButton/>
+        <RedirectBtn to="/">Strona Główna</RedirectBtn>
         <div className="page-wrapper">
         <MainLogic />
     </div>

@@ -123,6 +123,9 @@ body {
   height: 228px;
 }
 
+
+
+
 @media (max-width: 100vw) {
   .game__all-girl-image {
     width: 80vw; /* Zajmuje 40% szerokości widoku */

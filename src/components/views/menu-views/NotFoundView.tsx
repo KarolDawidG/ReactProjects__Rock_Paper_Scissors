@@ -1,10 +1,10 @@
-import { MainPageButton } from '../../utils/buttons/MainPageButton';
 import '../../css/style.css';
+import { RedirectBtn } from '../../utils/buttons/RedirectBtn';
 
 export const NotFoundView = () => {
   return (
     <>
-      <MainPageButton/>
+      <RedirectBtn to="/">Strona Główna</RedirectBtn>
       <h1>Strona nie istnieje</h1>
     </>
   );
