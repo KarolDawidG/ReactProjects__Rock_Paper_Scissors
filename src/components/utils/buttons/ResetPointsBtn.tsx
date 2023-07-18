@@ -1,29 +1,23 @@
-import React, { useState } from 'react';
+    import '../../css/button.css';
 
-export const ResetPointsBtn = () => {
-  const [resetKey, setResetKey] = useState(0);
-
-  const handleClick = () => {
-    localStorage.removeItem('pktG1');
-    localStorage.removeItem('pktG2');
-    setResetKey((prevKey) => prevKey + 1);
-  };
-
-  const Refresh = () => {
-    setTimeout(() => {
-      window.location.reload();
-    }, 100);
-    return null;
-  };
-
-  return (
-    <div className="menu">
-      <div className="button-menu__options">
-        <button className="game__reset-button" onClick={handleClick}>Resetuj punkty</button>
-      </div>
-      {resetKey % 2 === 0 ? null : <Refresh />}
-    </div>
-  );
-};
-
-
+    type ResetPointsBtnProps = {
+      handleReset: () => void;
+    };
+    
+    export const ResetPointsBtn: React.FC<ResetPointsBtnProps> = ({ handleReset }) => {
+      const handleClick = () => {
+        localStorage.removeItem('pktG1');
+        localStorage.removeItem('pktG2');
+        handleReset();
+      };
+    
+      return (
+        <div className="menu">
+          <div className="button-menu__options">
+            <button className="game__reset-button" onClick={handleClick}>
+              Resetuj punkty
+            </button>
+          </div>
+        </div>
+      );
+    };

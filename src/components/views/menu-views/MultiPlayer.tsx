@@ -3,7 +3,6 @@ import '../../css/style.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Wybor } from '../../logic/MultiLogic/Wybor';
-import { ResetPointsBtn } from '../../utils/buttons/ResetPointsBtn';
 import { PointsDisplay } from '../../logic/MultiLogic/PointsDisplay';
 
 export const MultiPlayer = () => {
@@ -24,7 +23,7 @@ export const MultiPlayer = () => {
               <Wybor handleButtonClick={handleButtonClick} />
               <PointsDisplay/>
         </div>
-      <ResetPointsBtn/>
+      
       
     </>
   );
