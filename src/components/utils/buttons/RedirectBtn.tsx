@@ -4,7 +4,7 @@ import '../../css/button.css';
 
 type RedirectBtnProps = {
   to: string;
-  children: React.ReactNode;
+  children: string;
 };
 
 export const RedirectBtn: React.FC<RedirectBtnProps> = ({ to, children }) => {

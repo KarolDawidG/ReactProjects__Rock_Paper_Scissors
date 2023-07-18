@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { RedirectBtn } from '../../utils/buttons/RedirectBtn';
 import { useParams } from 'react-router-dom';
-import { SecondWin } from '../../views/multi-views/SecondWin';
-import { RemisMulti } from '../../views/multi-views/RemisMulti';
-import { FirstWin } from '../../views/multi-views/FirstWin';
+import { DisplayResultMulti } from '../../views/multi-views/DisplayResultMulti';
 import { Wybor } from './Wybor';
 
 interface DrugiPlayerProps {
@@ -49,11 +47,32 @@ export const DrugiPlayer: React.FC<DrugiPlayerProps> = () => {
   const renderView = () => {
     if (graczOne && graczOne !== '' && graczSecond !== 0) {
       if (Number(graczOne) === Number(graczSecond)) {
-            return <RemisMulti pktG1={pktG1} pktG2={pktG2}/>;
+          return <DisplayResultMulti 
+                pktG1={pktG1} 
+                pktG2={pktG2} 
+                sentence={'Nikt nie wygrał'} 
+                result={'Remis'} 
+                img1={'disBlack'}
+                img2={'disGrey'}
+            />;
       } else if (Number(graczOne) < Number(graczSecond)) {
-            return <FirstWin pktG1={pktG1} pktG2={pktG2} />;
+            return <DisplayResultMulti 
+                pktG1={pktG1} 
+                pktG2={pktG2} 
+                sentence={'Gratulacje!'} 
+                result={'Gracz drugi zwyciężył!'} 
+                img1={'sadBlack'}
+                img2={'happyGrey'}
+          />;
       } else {
-            return <SecondWin pktG1={pktG1} pktG2={pktG2}/>;
+            return <DisplayResultMulti 
+                pktG1={pktG1} 
+                pktG2={pktG2} 
+                sentence={'Gratulacje dla zwycięscy'} 
+                result={'Wygrywa gracz numer 1!'} 
+                img1={'happyBlack'}
+                img2={'sadGrey'}
+          />;
       }
     } else {
       return (
