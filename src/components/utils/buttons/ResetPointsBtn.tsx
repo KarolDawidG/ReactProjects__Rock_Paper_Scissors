@@ -4,7 +4,7 @@ export const ResetPointsBtn = () => {
   const handleClick = () => {
     localStorage.removeItem('pktG1');
     localStorage.removeItem('pktG2');
-    window.location.reload();
+    //window.location.reload();
   };
 
 return (
