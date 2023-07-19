@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
-import { IndexTemplate } from '../../SingleIndex';
-import { PrzegranaTemplate } from '../../views/game-views/Przegrana';
-import { RemisTemplate } from '../../views/game-views/Remis';
-import { WygranaTemplate } from '../../views/game-views/Wygrana';
+import { SingleIndex } from '../../SingleIndex';
+import { DisplayResult } from '../../views/single-views/DisplayResult';
 import { init } from './init';
 import { render } from './render';
 
@@ -99,9 +97,11 @@ export const MainLogic = () => {
     <main className="main">
       
       {wynik === '' && (
-        <IndexTemplate handleGra={handleGra} punkty={punkty} punktyPC={punktyPC} handleKasuj={handleKasuj} />
+        <SingleIndex handleGra={handleGra} punkty={punkty} punktyPC={punktyPC} handleKasuj={handleKasuj} />
       )}
-      {wynik === 'przegrana' && <PrzegranaTemplate
+      {wynik === 'przegrana' && <DisplayResult
+                result={'Przegrałeś'}
+                img={'sadGrey'}
                 punkty={punkty}
                 punktyPC={punktyPC}
                 opcjaNumber={opcjaNumber}
@@ -111,7 +111,9 @@ export const MainLogic = () => {
                 setR={setR}
                 render={render}
                   />}
-      {wynik === 'remis' && <RemisTemplate 
+      {wynik === 'remis' && <DisplayResult 
+                result={'Remis'}
+                img={'disGrey'}
                 punkty={punkty}
                 punktyPC={punktyPC}
                 opcjaNumber={opcjaNumber}
@@ -121,7 +123,9 @@ export const MainLogic = () => {
                 setR={setR}
                 render={render}
                   />}
-      {wynik === 'wygrana' && <WygranaTemplate 
+      {wynik === 'wygrana' && <DisplayResult
+                result={'Wygrałeś'}
+                img={'happyGrey'} 
                 punkty={punkty}
                 punktyPC={punktyPC}
                 opcjaNumber={opcjaNumber}

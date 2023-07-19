@@ -1,9 +1,19 @@
 import React from 'react';
 import '../../css/game-views.css'
 import { handlePlayAgainLogic } from '../../logic/SingleLogic/handlePlayAgainLogic';
-import {GameInterfaceProps} from '../../utils/interface/GameInterfaceProps';
 
-export const CoWyswietlic: React.FC<GameInterfaceProps> = ({ setWynik, setOpcjaNumber, setR, render, punkty, punktyPC, opcjaNumber, R}) => {
+interface WhatToDisplayProps {
+  punkty: number;
+  punktyPC: number;
+  opcjaNumber: number | null;
+  R: number | null;
+  setWynik: any;
+  setOpcjaNumber: any;
+  setR: any;
+  render: any;
+}
+
+export const WhatToDisplay: React.FC<WhatToDisplayProps> = ({ setWynik, setOpcjaNumber, setR, render, punkty, punktyPC, opcjaNumber, R}) => {
   const whatToDisplay = (opcja: any) => {
     if (opcja === 1) {
       return {

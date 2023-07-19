@@ -1,16 +1,28 @@
 import React from 'react';
 import '../../css/game-views.css'
-import { CoWyswietlic } from './CoWyswietlic';
+import { WhatToDisplay } from './WhatToDisplay';
 import { Punkty } from '../../utils/other/Punkty';
 import { handlePlayAgainLogic } from '../../logic/SingleLogic/handlePlayAgainLogic';
-import {GameInterfaceProps} from '../../utils/interface/GameInterfaceProps';
 
-export const PrzegranaTemplate: React.FC<GameInterfaceProps> = ({setWynik, setOpcjaNumber, setR, render, punkty, punktyPC, opcjaNumber, R }) => {
+interface DisplayProps {
+  punkty: number;
+  punktyPC: number;
+  opcjaNumber: number | null;
+  R: number | null;
+  setWynik: any;
+  setOpcjaNumber: any;
+  setR: any;
+  render: any;
+  result: string;
+  img: string;
+}
+
+export const DisplayResult: React.FC<DisplayProps> = ({setWynik, setOpcjaNumber, setR, render, punkty, punktyPC, opcjaNumber, R, result, img}) => {
   const handlePlayAgain = () => handlePlayAgainLogic(setWynik, setOpcjaNumber, setR, render, punkty, punktyPC);
 
   return (
     <>
-      <CoWyswietlic
+      <WhatToDisplay
                       punkty={punkty}
                       punktyPC={punktyPC}
                       opcjaNumber={opcjaNumber}
@@ -21,8 +33,8 @@ export const PrzegranaTemplate: React.FC<GameInterfaceProps> = ({setWynik, setOp
                       render={render}
       />
         <div id="przegrana">
-            <p className="result__przegrana">Przegrana</p>
-            <img src="img/sadGrey.jpg" alt="Obrazek" className="game__girl-image" onClick={handlePlayAgain}/>
+            <p className="result__wygrana">{result}</p>
+            <img src={`img/${img}.jpg`} alt="Obrazek" className="game__girl-image" onClick={handlePlayAgain}/>
         </div>
       <Punkty punkty={punkty} punktyPC={punktyPC}/>
     </>

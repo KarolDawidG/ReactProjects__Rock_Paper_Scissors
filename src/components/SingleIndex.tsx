@@ -1,9 +1,15 @@
 import React from 'react';
 import './css/style.css';
-import { IndexTemplateProps } from './utils/interface/IndexTemplateProps';
 import { Punkty } from './utils/other/Punkty';
 
-export const IndexTemplate: React.FC<IndexTemplateProps> = ({ handleGra, punkty, punktyPC, handleKasuj }) => {
+interface SingleIndexProps {
+  handleGra: (opcja: number) => void;
+  punkty: number;
+  punktyPC: number;
+  handleKasuj: () => void;
+}
+
+export const SingleIndex: React.FC<SingleIndexProps> = ({ handleGra, punkty, punktyPC, handleKasuj }) => {
   return (
     <>
         <div id="index" className="game__container">
