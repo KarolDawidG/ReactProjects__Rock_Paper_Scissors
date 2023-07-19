@@ -6,8 +6,8 @@ import { SinglePlayer } from './components/views/menu-views/SinglePlayer';
 import { NotFoundView } from './components/views/menu-views/NotFoundView';
 import { MultiPlayer } from './components/views/menu-views/MultiPlayer';
 import { DrugiPlayer } from './components/logic/MultiLogic/DrugiPlayer';
-
 import { Menu } from './components/views/page-views/Menu';
+import {ContactForm} from './ContactForm';
 
 export const App = () => {
   return (
@@ -17,6 +17,7 @@ export const App = () => {
             <Route path="/" element={<Menu/>} />
             <Route path="/single" element={<SinglePlayer/>} />
             <Route path="/multi" element={<MultiPlayer/>} />
+            <Route path="/contact" element={<ContactForm/>} />
             <Route path="/player1/:graczOne" element={<DrugiPlayer/>} />
             <Route path="*" element={<NotFoundView/>} />
         </Routes>

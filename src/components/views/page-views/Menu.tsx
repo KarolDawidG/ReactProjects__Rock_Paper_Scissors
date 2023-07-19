@@ -12,6 +12,9 @@ export const Menu = () => {
                   <Link to="/multi">
                     <button className="game__reset-button">Multiplayer</button>
                   </Link>
+                  <Link to="/contact">
+                    <button className="game__reset-button">Contact to us</button>
+                  </Link>
                   <ImageMenu/>
             </div>
       </div>
