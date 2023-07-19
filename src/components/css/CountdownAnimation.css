@@ -1,0 +1,23 @@
+.countdown-animation {
+  font-family: Arial;
+  font-size: 48px;
+  color: gold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock-loader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.second-player-time {
+  font-family: Arial;
+  font-size: 40px;
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
