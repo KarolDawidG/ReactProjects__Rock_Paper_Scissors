@@ -1,15 +1,15 @@
 import React from 'react';
-import './css/style.css';
-import { Punkty } from './utils/other/Punkty';
+import '../../css/style.css';
+import { Punkty } from '../../utils/other/Punkty';
 
-interface SingleIndexProps {
+interface SingleWyborProps {
   handleGra: (opcja: number) => void;
   punkty: number;
   punktyPC: number;
   handleKasuj: () => void;
 }
 
-export const SingleIndex: React.FC<SingleIndexProps> = ({ handleGra, punkty, punktyPC, handleKasuj }) => {
+export const SingleWybor: React.FC<SingleWyborProps> = ({ handleGra, punkty, punktyPC, handleKasuj }) => {
   return (
     <>
         <div id="index" className="game__container">

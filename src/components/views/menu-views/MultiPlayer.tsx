@@ -4,28 +4,27 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Wybor } from '../../logic/MultiLogic/Wybor';
 import { PointsDisplay } from '../../logic/MultiLogic/PointsDisplay';
-import { Loading } from './Loading';
+import { Loading } from '../../logic/MultiLogic/Loading';
 
 export const MultiPlayer = () => {
-  const [graczOne, setGraczOne] = useState(0);
-  const [showNewView, setShowNewView] = useState(false); // Dodany stan showNewView
-  const navigate = useNavigate();
+  const [graczOne, setGraczOne] = useState<number>(0);
+  console.log(graczOne);
+  const [showNewView, setShowNewView] = useState(false); // widok ukryty, dopóki false
+  const przekieruj = useNavigate();
 
   const handleButtonClick = (value: number) => {
     setGraczOne(value);
-    setShowNewView(true); // Ustawienie showNewView na true
+    setShowNewView(true); // Ustawienie showNewView na true po klikniecu button
 
     setTimeout(() => {
-      navigate(`/player1/${value}`);
-    }, 5000); // Po 3 sekundach przejście do nowego widoku
+      przekieruj(`/player1/${value}`);  //przekierowanie na /player1 (...)
+    }, 5000); // po 5 sekundach 
   };
 
-  console.log(graczOne);
   return (
     <>
       <RedirectBtn to="/">Strona Główna</RedirectBtn>
       <div id="index" className="game__container">
-        
         {showNewView ? (
           <Loading/>
         ) : (

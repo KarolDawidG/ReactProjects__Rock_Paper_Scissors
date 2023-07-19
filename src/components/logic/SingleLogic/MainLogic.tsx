@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { SingleIndex } from '../../SingleIndex';
+import { SingleWybor } from './SingleWybor';
 import { DisplayResult } from '../../views/single-views/DisplayResult';
 import { init } from './init';
 import { render } from './render';
@@ -97,7 +97,7 @@ export const MainLogic = () => {
     <main className="main">
       
       {wynik === '' && (
-        <SingleIndex handleGra={handleGra} punkty={punkty} punktyPC={punktyPC} handleKasuj={handleKasuj} />
+        <SingleWybor handleGra={handleGra} punkty={punkty} punktyPC={punktyPC} handleKasuj={handleKasuj} />
       )}
       {wynik === 'przegrana' && <DisplayResult
                 result={'Przegrałeś'}
