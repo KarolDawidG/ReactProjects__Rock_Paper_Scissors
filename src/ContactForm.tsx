@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './ContactForm.css';
 import axios from 'axios';
 import { RedirectBtn } from './components/utils/buttons/RedirectBtn';
@@ -20,7 +20,7 @@ export const ContactForm = () => {
     };
 
     try {
-      const response = await axios.post('http://rock-paper-scissors.ct8.pl/form', formData);
+      const response = await axios.post('https://rock-paper-scissors.ct8.pl/form', formData);
 
       if (response.status === 200 && response.data === 'success') {
         alert('An E-mail has been sent');
