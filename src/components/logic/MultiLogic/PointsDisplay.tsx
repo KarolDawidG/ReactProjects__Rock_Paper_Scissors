@@ -40,7 +40,7 @@ export const PointsDisplay: React.FC = () => {
 
   return (
     <div className="button-menu__options">
-      <p>Angel Black: {pktG1} vs Alex Grey: {pktG2}</p>
+      <p>Black: {pktG1} vs Grey: {pktG2}</p>
       <ResetPointsBtn handleReset={handleReset} />
     </div>
   );

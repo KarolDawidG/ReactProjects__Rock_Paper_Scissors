@@ -16,7 +16,7 @@ export const DisplayResultMulti: React.FC<RedirectBtnProps> = ({pktG1, pktG2, se
       <div className='main-div'>
         <RedirectBtn to="/multi">Zagraj jeszcze raz</RedirectBtn>
           <h2 className="text__main blink-red">{result}</h2>
-          <p style={{ marginBottom: '0.1rem' }}>Angel Black vs Alex Grey</p>
+          <p style={{ marginBottom: '0.1rem' }}>Black vs Grey</p>
           <p style={{ marginBottom: '0.1rem' }}>{pktG1} : {pktG2}</p>
  
           <p className="text color-change">{sentence}</p>

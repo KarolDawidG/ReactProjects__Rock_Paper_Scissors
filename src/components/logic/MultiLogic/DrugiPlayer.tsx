@@ -60,7 +60,7 @@ export const DrugiPlayer: React.FC<DrugiPlayerProps> = () => {
                 pktG1={pktG1} 
                 pktG2={pktG2} 
                 sentence={'Gratulacje!'} 
-                result={'Alex Grey zwycięża!'} 
+                result={'Grey zwycięża!'} 
                 img1={'sadBlack'}
                 img2={'happyGrey'}
           />;
@@ -69,7 +69,7 @@ export const DrugiPlayer: React.FC<DrugiPlayerProps> = () => {
                 pktG1={pktG1} 
                 pktG2={pktG2} 
                 sentence={'Gratulacje dla zwycięscy'} 
-                result={'Wygrywa Angel Black!'} 
+                result={'Wygrywa Black!'} 
                 img1={'happyBlack'}
                 img2={'sadGrey'}
           />;
