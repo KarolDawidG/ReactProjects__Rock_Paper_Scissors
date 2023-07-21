@@ -9,7 +9,7 @@ export const ContactForm = () => {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e:any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     const formData = {
@@ -20,8 +20,9 @@ export const ContactForm = () => {
     };
 
     try {
-      const response = await axios.post('http://rock-paper-scissors.ct8.pl/form', formData);
+      const response = await axios.post('https://rock-paper-scissors.ct8.pl/form', formData);
       //const response = await axios.post('http://localhost:3001/form', formData);
+
       if (response.status === 200 && response.data === 'success') {
         alert('An E-mail has been sent');
         setName('');
@@ -29,13 +30,15 @@ export const ContactForm = () => {
         setSubject('');
         setMessage('');
       } else {
-        alert('Something went wrong!');
+        console.log(response); // Dodajemy wypisanie pełnej odpowiedzi z serwera do konsoli
+        alert('Something went wrong! Check "console.log(response)" .');
       }
     } catch (error) {
-      console.log(error);
-      alert('Something went wrong!');
+      console.log(error); // Dodajemy wypisanie pełnego błędu do konsoli
+      alert('Something went wrong! Check "console.log(error)" .');
     }
   };
+
 
   return (
    <>
