@@ -20,7 +20,7 @@ export const ContactForm = () => {
     };
 
     try {
-      const response = await axios.post('https://rock-paper-scissors.ct8.pl/form', formData);
+      const response = await axios.post('http://rock-paper-scissors.ct8.pl/form', formData);
       //const response = await axios.post('http://localhost:3001/form', formData);
       if (response.status === 200 && response.data === 'success') {
         alert('An E-mail has been sent');
