@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import './ContactForm.css';
 import axios from 'axios';
-import { RedirectBtn } from './components/utils/buttons/RedirectBtn';
+import { RedirectBtn } from '../../utils/buttons/RedirectBtn';
+import {CustomAlert} from "../custom-alert/CustomAlert";
+import { showAlert, closeAlert } from '../custom-alert/CustomAlertUtils';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  const [alert, setAlert] = useState({ message: '', type: '' });
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -21,21 +24,22 @@ export const ContactForm = () => {
 
     try {
       const response = await axios.post('https://rock-paper-scissors.ct8.pl/form', formData);
-      //const response = await axios.post('http://localhost:3001/form', formData);
 
       if (response.status === 200 && response.data === 'success') {
-        alert('An E-mail has been sent');
+
         setName('');
         setEmail('');
         setSubject('');
         setMessage('');
+        showAlert('An E-mail has been sent', 'success', setAlert);
       } else {
-        console.log(response); // Dodajemy wypisanie pełnej odpowiedzi z serwera do konsoli
-        alert('Something went wrong! Check "console.log(response)" .');
+        console.log(response);
+        showAlert('Something went wrong! Check the console.', 'error', setAlert);
       }
     } catch (error) {
-      console.log(error); // Dodajemy wypisanie pełnego błędu do konsoli
-      alert('Something went wrong! Check "console.log(error)" .');
+      console.log(error);
+      showAlert('Something went wrong! Check the console.', 'error', setAlert);
+
     }
   };
 
@@ -113,6 +117,7 @@ export const ContactForm = () => {
         <input type="submit" className="contact-form__submit-btn" value="Send Message" />
       </form>
     </div>
+     {alert.message && <CustomAlert message={alert.message} type={alert.type} onClose={() => closeAlert(setAlert)} />}
    </>
   );
 };

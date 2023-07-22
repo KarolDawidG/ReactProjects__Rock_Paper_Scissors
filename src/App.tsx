@@ -7,7 +7,7 @@ import { NotFoundView } from './components/views/menu-views/NotFoundView';
 import { MultiPlayer } from './components/views/menu-views/MultiPlayer';
 import { DrugiPlayer } from './components/logic/MultiLogic/DrugiPlayer';
 import { Menu } from './components/views/page-views/Menu';
-import {ContactForm} from './ContactForm';
+import {ContactForm} from './components/features/contact-form/ContactForm';
 
 export const App = () => {
   return (
