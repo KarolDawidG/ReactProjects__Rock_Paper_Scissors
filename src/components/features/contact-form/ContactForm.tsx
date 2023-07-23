@@ -43,7 +43,6 @@ export const ContactForm = () => {
     }
   };
 
-
   return (
    <>
    <RedirectBtn to="/">Strona Główna</RedirectBtn>

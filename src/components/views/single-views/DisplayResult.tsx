@@ -12,13 +12,12 @@ interface DisplayProps {
   setWynik: any;
   setOpcjaNumber: any;
   setR: any;
-  render: any;
   result: string;
   img: string;
 }
 
-export const DisplayResult: React.FC<DisplayProps> = ({setWynik, setOpcjaNumber, setR, render, punkty, punktyPC, opcjaNumber, R, result, img}) => {
-  const handlePlayAgain = () => handlePlayAgainLogic(setWynik, setOpcjaNumber, setR, render, punkty, punktyPC);
+export const DisplayResult: React.FC<DisplayProps> = ({setWynik, setOpcjaNumber, setR, punkty, punktyPC, opcjaNumber, R, result, img}) => {
+  const handlePlayAgain = () => handlePlayAgainLogic(setWynik, setOpcjaNumber, setR, punkty, punktyPC);
 
   return (
     <>
@@ -30,7 +29,7 @@ export const DisplayResult: React.FC<DisplayProps> = ({setWynik, setOpcjaNumber,
                       setWynik={setWynik}
                       setOpcjaNumber={setOpcjaNumber}
                       setR={setR}
-                      render={render}
+
       />
         <div id="przegrana">
             <p className="result__wygrana">{result}</p>

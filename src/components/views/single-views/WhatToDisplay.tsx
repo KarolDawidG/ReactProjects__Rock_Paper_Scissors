@@ -10,10 +10,9 @@ interface WhatToDisplayProps {
   setWynik: any;
   setOpcjaNumber: any;
   setR: any;
-  render: any;
 }
 
-export const WhatToDisplay: React.FC<WhatToDisplayProps> = ({ setWynik, setOpcjaNumber, setR, render, punkty, punktyPC, opcjaNumber, R}) => {
+export const WhatToDisplay: React.FC<WhatToDisplayProps> = ({ setWynik, setOpcjaNumber, setR,  punkty, punktyPC, opcjaNumber, R}) => {
   const whatToDisplay = (opcja: any) => {
     if (opcja === 1) {
       return {
@@ -36,7 +35,7 @@ export const WhatToDisplay: React.FC<WhatToDisplayProps> = ({ setWynik, setOpcja
   const wyborGracza = whatToDisplay(opcjaNumber);
   const wyborKomputera = whatToDisplay(R);
 
-  const handlePlayAgain = () => handlePlayAgainLogic(setWynik, setOpcjaNumber, setR, render, punkty, punktyPC);
+  const handlePlayAgain = () => handlePlayAgainLogic(setWynik, setOpcjaNumber, setR, punkty, punktyPC);
 
   return (
     <>
