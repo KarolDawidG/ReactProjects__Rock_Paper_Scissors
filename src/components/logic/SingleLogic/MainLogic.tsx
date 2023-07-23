@@ -57,9 +57,12 @@ export const MainLogic = () => {
   };
 
 
+
+
+
   return (
     <main className="main">
-      
+
       {wynik === '' && (
         <SingleWybor handleGra={handleGra} punkty={punkty} punktyPC={punktyPC} handleKasuj={handleKasuj} />
       )}
