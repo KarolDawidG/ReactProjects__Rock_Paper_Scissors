@@ -11,9 +11,9 @@ export const DisplayResult: React.FC<DisplayProps> = ({setWynik, setOpcjaNumber,
 
     const renderMatch = (e: number, f:number) =>{
         if (e > 2) {
-            return <Win whoWin={'Czlowiek'} regards={'Gratulacje!!!'}/>
+            return <Win whoWin={'CZŁOWIEK'} regards={'Gratulacje!!!'} punkty={punkty} punktyPC={punktyPC}/>
         } else if (f > 2){
-            return <Win whoWin={'Sztuczna Inteligencja'} regards={'Przykro nam!!!'}/>
+            return <Win whoWin={'PC'} regards={'Przykro nam!!!'} punkty={punkty} punktyPC={punktyPC}/>
         }else{
             return (
                 <>

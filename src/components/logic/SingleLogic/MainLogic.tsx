@@ -15,16 +15,13 @@ export const MainLogic = () => {
   const handleGra = (opcja: number) => {
     const opcjaNumber = parseInt(opcja.toString());
   
-
     choicesHistory.push(Number(opcjaNumber));
-    const estimatedNextChoice = Algorithm(choicesHistory);
 
-    console.log(choicesHistory);
-    console.log("Oszacowany kolejny wybór komputera:", estimatedNextChoice);
+    const hardAlgorithm = Algorithm(choicesHistory);
+    //const easyAlgorithm = () => Math.floor(Math.random() * 3) + 1;
 
-
-  //const R = Math.floor(Math.random() * 3) + 1;      // Algorytm nr 1    poziom łatwy
-  const R = estimatedNextChoice;                  // Algorytm nr 2    poziom sredni
+   // const Rr = easyAlgorithm();      // Algorytm nr 1    poziom łatwy
+    const R = hardAlgorithm;                  // Algorytm nr 2    poziom sredni
 
 
     if (opcjaNumber === R) {
@@ -69,9 +66,6 @@ export const MainLogic = () => {
     setR(null);
     choicesHistory.length = 0;      // zerowanie historii
   };
-
-
-
 
 
   return (
