@@ -1,15 +1,9 @@
 import React from 'react';
 import '../../css/style.css';
-import { Punkty } from '../../utils/other/Punkty';
+import { Points } from '../../utils/other/Points';
+import {SingleChoiceProps} from '../../utils/interfaces/SingleChoiceProps';
 
-interface SingleWyborProps {
-  handleGra: (opcja: number) => void;
-  punkty: number;
-  punktyPC: number;
-  handleKasuj: () => void;
-}
-
-export const SingleWybor: React.FC<SingleWyborProps> = ({ handleGra, punkty, punktyPC, handleKasuj }) => {
+export const SingleChoice: React.FC<SingleChoiceProps> = ({ handleGra, punkty, punktyPC, handleKasuj }) => {
   return (
     <>
         <div id="index" className="game__container">
@@ -32,7 +26,7 @@ export const SingleWybor: React.FC<SingleWyborProps> = ({ handleGra, punkty, pun
             </li>
           </ul>
           <div className="game__score">
-            <Punkty punkty={punkty} punktyPC={punktyPC}/>
+            <Points punkty={punkty} punktyPC={punktyPC}/>
           </div>
           <div className="game__reset">
             <button onClick={handleKasuj} className="game__reset-button">

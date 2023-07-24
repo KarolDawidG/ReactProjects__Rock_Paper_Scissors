@@ -1,14 +1,7 @@
 import '../../css/multi-view.css';
 import {RedirectBtn} from '../../utils/buttons/RedirectBtn';
+import {RedirectBtnProps} from '../../utils/interfaces/RedirectBtnProps';
 
-type RedirectBtnProps = {
-  pktG1: number;
-  pktG2: number;
-  result: string;
-  sentence: string;
-  img1: string;
-  img2: string;
-};
 
 export const DisplayResultMulti: React.FC<RedirectBtnProps> = ({pktG1, pktG2, sentence, result, img1, img2}) => {
   return (

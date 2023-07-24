@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import '../../css/button.css';
 import { ResetPointsBtn } from '../../utils/buttons/ResetPointsBtn';
 
-
 export const PointsDisplay: React.FC = () => {
   const [pktG1, setPktG1] = useState<number | null>(null);
   const [pktG2, setPktG2] = useState<number | null>(null);

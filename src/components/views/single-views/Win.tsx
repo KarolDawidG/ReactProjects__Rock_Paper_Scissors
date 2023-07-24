@@ -1,10 +1,7 @@
 import React from 'react';
 import '../../css/game-views.css'
+import {WinProps} from '../../utils/interfaces/WinProps';
 
-interface WinProps {
-    whoWin: string;
-    regards: string;
-}
 
 export const Win: React.FC<WinProps> = ({whoWin, regards}) => {
   return (

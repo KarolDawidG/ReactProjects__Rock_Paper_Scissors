@@ -2,14 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { RedirectBtn } from '../../utils/buttons/RedirectBtn';
 import { useParams } from 'react-router-dom';
 import { DisplayResultMulti } from '../../views/multi-views/DisplayResultMulti';
-import { Wybor } from './Wybor';
+import { Choice } from './Choice';
+import {SecondPlayerProps} from '../../utils/interfaces/SecondPlayerProps';
 
-interface DrugiPlayerProps {
-  graczOne?: number;
-  graczSecond?: number;
-}
-
-export const DrugiPlayer: React.FC<DrugiPlayerProps> = () => {
+export const SecondPlayer: React.FC<SecondPlayerProps> = () => {
   const { graczOne } = useParams();
   const [graczSecond, setGraczSecond] = useState(0);
 
@@ -78,7 +74,7 @@ export const DrugiPlayer: React.FC<DrugiPlayerProps> = () => {
       return (
         <>
           <p className="game__option-label">Drugi gracz</p>
-          <Wybor handleButtonClick={handleButtonClick} />
+          <Choice handleButtonClick={handleButtonClick} />
         </>
       );
     }

@@ -1,4 +1,4 @@
-export const handlePlayAgainLogic = (
+export const HandlePlayAgainLogic = (
   setWynik: React.Dispatch<React.SetStateAction<string>>,
   setOpcjaNumber: React.Dispatch<React.SetStateAction<number | null>>,
   setR: React.Dispatch<React.SetStateAction<number | null>>,

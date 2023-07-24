@@ -1,16 +1,8 @@
 import React from 'react';
 import '../../css/game-views.css'
-import { handlePlayAgainLogic } from '../../logic/SingleLogic/handlePlayAgainLogic';
+import { HandlePlayAgainLogic } from '../../logic/SingleLogic/HandlePlayAgainLogic';
+import {WhatToDisplayProps} from '../../utils/interfaces/WhatToDisplayProps';
 
-interface WhatToDisplayProps {
-  punkty: number;
-  punktyPC: number;
-  opcjaNumber: number | null;
-  R: number | null;
-  setWynik: any;
-  setOpcjaNumber: any;
-  setR: any;
-}
 
 export const WhatToDisplay: React.FC<WhatToDisplayProps> = ({ setWynik, setOpcjaNumber, setR,  punkty, punktyPC, opcjaNumber, R}) => {
   const whatToDisplay = (opcja: any) => {
@@ -34,8 +26,7 @@ export const WhatToDisplay: React.FC<WhatToDisplayProps> = ({ setWynik, setOpcja
 
   const wyborGracza = whatToDisplay(opcjaNumber);
   const wyborKomputera = whatToDisplay(R);
-
-  const handlePlayAgain = () => handlePlayAgainLogic(setWynik, setOpcjaNumber, setR, punkty, punktyPC);
+  const handlePlayAgain = () => HandlePlayAgainLogic(setWynik, setOpcjaNumber, setR, punkty, punktyPC);
 
   return (
     <>

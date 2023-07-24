@@ -1,24 +1,14 @@
 import React from 'react';
 import '../../css/game-views.css'
 import { WhatToDisplay } from './WhatToDisplay';
-import { Punkty } from '../../utils/other/Punkty';
-import { handlePlayAgainLogic } from '../../logic/SingleLogic/handlePlayAgainLogic';
+import { Points } from '../../utils/other/Points';
+import { HandlePlayAgainLogic } from '../../logic/SingleLogic/HandlePlayAgainLogic';
 import {Win} from "./Win";
+import {DisplayProps} from '../../utils/interfaces/DisplayProps';
 
-interface DisplayProps {
-  punkty: number;
-  punktyPC: number;
-  opcjaNumber: number | null;
-  R: number | null;
-  setWynik: any;
-  setOpcjaNumber: any;
-  setR: any;
-  result: string;
-  img: string;
-}
 
 export const DisplayResult: React.FC<DisplayProps> = ({setWynik, setOpcjaNumber, setR, punkty, punktyPC, opcjaNumber, R, result, img}) => {
-  const handlePlayAgain = () => handlePlayAgainLogic(setWynik, setOpcjaNumber, setR, punkty, punktyPC);
+  const handlePlayAgain = () => HandlePlayAgainLogic(setWynik, setOpcjaNumber, setR, punkty, punktyPC);
 
     const renderMatch = (e: number, f:number) =>{
         if (e > 2) {
@@ -41,7 +31,7 @@ export const DisplayResult: React.FC<DisplayProps> = ({setWynik, setOpcjaNumber,
                         <p className="result__wygrana">{result}</p>
                         <img src={`img/${img}.jpg`} alt="Obrazek" className="game__girl-image" onClick={handlePlayAgain}/>
                     </div>
-                    <Punkty punkty={punkty} punktyPC={punktyPC}/>
+                    <Points punkty={punkty} punktyPC={punktyPC}/>
                 </>
             );
         }

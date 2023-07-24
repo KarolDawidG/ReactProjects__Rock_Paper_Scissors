@@ -1,10 +1,10 @@
 import React from 'react';
 
-interface WyborProps {
+interface ChoiceProps {
   handleButtonClick: (value: number) => void;
 }
 
-export const Wybor: React.FC<WyborProps> = ({ handleButtonClick }) => {
+export const Choice: React.FC<ChoiceProps> = ({ handleButtonClick }) => {
   return (
     <div className='game__options--main'>
       <ul className="game__options">

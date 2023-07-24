@@ -1,5 +1,4 @@
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
-
 import "../../css/CountdownCircle.css";
 
 const renderTime = ({ remainingTime }: { remainingTime: number }) => {

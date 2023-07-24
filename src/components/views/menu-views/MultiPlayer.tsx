@@ -2,7 +2,7 @@ import { RedirectBtn } from '../../utils/buttons/RedirectBtn';
 import '../../css/style.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Wybor } from '../../logic/MultiLogic/Wybor';
+import { Choice } from '../../logic/MultiLogic/Choice';
 import { PointsDisplay } from '../../logic/MultiLogic/PointsDisplay';
 import { Loading } from '../../logic/MultiLogic/Loading';
 
@@ -30,7 +30,7 @@ export const MultiPlayer = () => {
         ) : (
           <>
           <p className="game__option-label">Pierwszy gracz</p>
-            <Wybor handleButtonClick={handleButtonClick} />
+            <Choice handleButtonClick={handleButtonClick} />
             <PointsDisplay />
           </>
         )}

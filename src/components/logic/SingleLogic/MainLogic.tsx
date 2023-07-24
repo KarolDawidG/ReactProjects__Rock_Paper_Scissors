@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { SingleWybor } from './SingleWybor';
+import { SingleChoice } from './SingleChoice';
 import { DisplayResult } from '../../views/single-views/DisplayResult';
 
 export const MainLogic = () => {
@@ -64,7 +64,7 @@ export const MainLogic = () => {
     <main className="main">
 
       {wynik === '' && (
-        <SingleWybor handleGra={handleGra} punkty={punkty} punktyPC={punktyPC} handleKasuj={handleKasuj} />
+        <SingleChoice handleGra={handleGra} punkty={punkty} punktyPC={punktyPC} handleKasuj={handleKasuj} />
       )}
       {wynik === 'przegrana' && <DisplayResult
                 result={'Przegrałeś'}

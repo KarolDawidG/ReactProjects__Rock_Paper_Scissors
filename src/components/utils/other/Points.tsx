@@ -1,12 +1,9 @@
 import React from 'react';
 import '../../css/game-views.css'
+import {PointsTemplateProps} from '../../utils/interfaces/PointsTemplateProps';
 
-interface PunktyTemplateProps {
-  punkty: number;
-  punktyPC: number;
-}
 
-export const Punkty: React.FC<PunktyTemplateProps> = ({  punkty, punktyPC}) => {
+export const Points: React.FC<PointsTemplateProps> = ({  punkty, punktyPC}) => {
   return (
     <>
     <div id="wygrana">
