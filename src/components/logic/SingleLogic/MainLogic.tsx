@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { SingleChoice } from './SingleChoice';
 import { DisplayResult } from '../../views/single-views/DisplayResult';
+import {Algorithm} from './Algorithm';
+const choicesHistory: number[] = [];
 
 export const MainLogic = () => {
   const [punkty, setPunkty] = useState<number>(0);
@@ -8,10 +10,22 @@ export const MainLogic = () => {
   const [wynik, setWynik] = useState<string>('');
   const [opcjaNumber, setOpcjaNumber] = useState<null | number>(null);
   const [R, setR] = useState<null | number>(null);
+  
 
   const handleGra = (opcja: number) => {
     const opcjaNumber = parseInt(opcja.toString());
-    const R = losowanie();
+  
+
+    choicesHistory.push(Number(opcjaNumber));
+    const estimatedNextChoice = Algorithm(choicesHistory);
+
+    console.log(choicesHistory);
+    console.log("Oszacowany kolejny wybór komputera:", estimatedNextChoice);
+
+
+  //const R = Math.floor(Math.random() * 3) + 1;      // Algorytm nr 1    poziom łatwy
+  const R = estimatedNextChoice;                  // Algorytm nr 2    poziom sredni
+
 
     if (opcjaNumber === R) {
       setWynik('remis');
@@ -46,7 +60,6 @@ export const MainLogic = () => {
     setR(R);
   };
 
-  const losowanie = () => Math.floor(Math.random() * 3) + 1;
 
   const handleKasuj = () => {
     setPunktyPC(0);
@@ -54,6 +67,7 @@ export const MainLogic = () => {
     setWynik('');
     setOpcjaNumber(null);
     setR(null);
+    choicesHistory.length = 0;      // zerowanie historii
   };
 
 
