@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import '../../css/button.css';
 
 export const RefreshBtn = () => {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ export const RefreshBtn = () => {
 
   return (
     <div>
-      <button onClick={refreshPage}>Odswiez</button>
+      <button className="game__reset-button" onClick={refreshPage}>Odswiez</button>
     </div>
   );
 }
