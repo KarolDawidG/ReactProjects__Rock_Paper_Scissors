@@ -2,12 +2,12 @@ import React from 'react';
 import '../../css/game-views.css'
 import { WhatToDisplay } from './WhatToDisplay';
 import { Points } from '../../utils/other/Points';
-import { handlePlayAgainLogic } from '../../logic/SingleLogic/HandlePlayAgainLogic';
+import { PlayAgainLogic } from '../../logic/SingleLogic/handlePlayAgainLogic';
 import {Win} from "./Win";
 import {DisplayProps} from '../../utils/interfaces/DisplayProps';
 
 export const DisplayResult: React.FC<DisplayProps> = ({setWynik, setOpcjaNumber, setR, punkty, punktyPC, opcjaNumber, R, result, img}) => {
-  const handlePlayAgain = () => handlePlayAgainLogic(setWynik, setOpcjaNumber, setR, punkty, punktyPC);
+  const handlePlayAgain = () => PlayAgainLogic(setWynik, setOpcjaNumber, setR, punkty, punktyPC);
 
     const renderMatch = (e: number, f:number) =>{
         if (e > 2) {
