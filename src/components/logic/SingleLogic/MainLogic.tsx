@@ -1,7 +1,10 @@
 import { useState } from 'react';
+import '../../css/win.css';
 import { SingleChoice } from './SingleChoice';
 import { DisplayResult } from '../../views/single-views/DisplayResult';
-import {Algorithm} from './Algorithm';
+import { Algorithm } from './Algorithm';
+import { LevelBtn } from '../../utils/buttons/LevelBtn';
+
 const choicesHistory: number[] = [];
 
 export const MainLogic = () => {
@@ -10,33 +13,30 @@ export const MainLogic = () => {
   const [wynik, setWynik] = useState<string>('');
   const [opcjaNumber, setOpcjaNumber] = useState<null | number>(null);
   const [R, setR] = useState<null | number>(null);
-  
+  const [level, setLevel] = useState<string>('hard'); // Dodajemy stan do śledzenia poziomu algorytmu
 
   const handleGra = (opcja: number) => {
     const opcjaNumber = parseInt(opcja.toString());
-  
     choicesHistory.push(Number(opcjaNumber));
 
     const hardAlgorithm = Algorithm(choicesHistory);
-    //const easyAlgorithm = () => Math.floor(Math.random() * 3) + 1;
+    const easyAlgorithm = () => Math.floor(Math.random() * 3) + 1;
 
-   // const Rr = easyAlgorithm();      // Algorytm nr 1    poziom łatwy
-    const R = hardAlgorithm;                  // Algorytm nr 2    poziom sredni
+    const selectedAlgorithm = level === 'hard' ? hardAlgorithm  : easyAlgorithm(); // Wybieramy odpowiedni algorytm na podstawie poziomu
 
-
-    if (opcjaNumber === R) {
+    if (opcjaNumber === selectedAlgorithm) {
       setWynik('remis');
-      remis(opcjaNumber, R);
+      remis(opcjaNumber, selectedAlgorithm);
     } else if (
-      (opcjaNumber === 1 && R === 2) ||
-      (opcjaNumber === 2 && R === 3) ||
-      (opcjaNumber === 3 && R === 1)
+      (opcjaNumber === 1 && selectedAlgorithm === 2) ||
+      (opcjaNumber === 2 && selectedAlgorithm === 3) ||
+      (opcjaNumber === 3 && selectedAlgorithm === 1)
     ) {
       setWynik('przegrana');
-      przegrana(opcjaNumber, R);
+      przegrana(opcjaNumber, selectedAlgorithm);
     } else {
       setWynik('wygrana');
-      wygrana(opcjaNumber, R);
+      wygrana(opcjaNumber, selectedAlgorithm);
     }
   };
 
@@ -67,12 +67,16 @@ export const MainLogic = () => {
     choicesHistory.length = 0;      // zerowanie historii
   };
 
+  const handleLevelChange = () => {
+    setLevel(level === 'hard' ? 'easy' : 'hard'); // Przełączamy poziom między 'easy' i 'hard' po kliknięciu przycisku
+  };
 
   return (
     <main className="main">
-
+      <LevelBtn level={level} handleLevelChange={handleLevelChange}/>
       {wynik === '' && (
         <SingleChoice handleGra={handleGra} punkty={punkty} punktyPC={punktyPC} handleKasuj={handleKasuj} />
+        
       )}
       {wynik === 'przegrana' && <DisplayResult
                 result={'Przegrałeś'}

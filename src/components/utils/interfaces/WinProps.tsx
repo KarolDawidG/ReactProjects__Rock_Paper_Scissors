@@ -3,4 +3,5 @@ export interface WinProps {
     regards: string;
     punkty: number;
     punktyPC: number;
+
 };
