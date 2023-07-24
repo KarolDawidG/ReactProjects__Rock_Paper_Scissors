@@ -13,7 +13,7 @@ export const MainLogic = () => {
   const [wynik, setWynik] = useState<string>('');
   const [opcjaNumber, setOpcjaNumber] = useState<null | number>(null);
   const [R, setR] = useState<null | number>(null);
-  const [level, setLevel] = useState<string>('hard'); // Dodajemy stan do śledzenia poziomu algorytmu
+  const [level, setLevel] = useState<string>('hard'); // Dodajemy stan do śledzenia poziomu algorytmu - zaczynamy od ciezkiego poziomu
 
   const handleGra = (opcja: number) => {
     const opcjaNumber = parseInt(opcja.toString());

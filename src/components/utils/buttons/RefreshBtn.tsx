@@ -3,14 +3,14 @@ import '../../css/button.css';
 
 export const RefreshBtn = () => {
   const navigate = useNavigate();
-
+  
   const refreshPage = () => {
     navigate(0);
   }
 
   return (
     <div>
-      <button className="game__reset-button" onClick={refreshPage}>Odswiez</button>
+      <button className="game__reset-button" onClick={refreshPage}>Jeszcze raz!</button>
     </div>
   );
 }
