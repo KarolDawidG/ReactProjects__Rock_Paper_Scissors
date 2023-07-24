@@ -6,7 +6,6 @@ import { HandlePlayAgainLogic } from '../../logic/SingleLogic/HandlePlayAgainLog
 import {Win} from "./Win";
 import {DisplayProps} from '../../utils/interfaces/DisplayProps';
 
-
 export const DisplayResult: React.FC<DisplayProps> = ({setWynik, setOpcjaNumber, setR, punkty, punktyPC, opcjaNumber, R, result, img}) => {
   const handlePlayAgain = () => HandlePlayAgainLogic(setWynik, setOpcjaNumber, setR, punkty, punktyPC);
 
