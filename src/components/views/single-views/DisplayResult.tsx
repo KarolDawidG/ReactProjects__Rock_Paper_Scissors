@@ -5,6 +5,7 @@ import { Points } from '../../utils/other/Points';
 import { PlayAgainLogic } from '../../logic/SingleLogic/handlePlayAgainLogic';
 import {Win} from "./Win";
 import {DisplayProps} from '../../utils/interfaces/DisplayProps';
+import { Sentence } from '../../features/sentences/Sentenc';
 
 export const DisplayResult: React.FC<DisplayProps> = ({setWynik, setOpcjaNumber, setR, punkty, punktyPC, opcjaNumber, R, result, img}) => {
   const handlePlayAgain = () => PlayAgainLogic(setWynik, setOpcjaNumber, setR, punkty, punktyPC);
@@ -17,6 +18,7 @@ export const DisplayResult: React.FC<DisplayProps> = ({setWynik, setOpcjaNumber,
         }else{
             return (
                 <>
+                <Sentence/>
                     <WhatToDisplay
                         punkty={punkty}
                         punktyPC={punktyPC}

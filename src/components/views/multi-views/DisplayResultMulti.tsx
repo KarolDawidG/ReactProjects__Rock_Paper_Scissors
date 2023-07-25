@@ -1,4 +1,5 @@
 import '../../css/multi-view.css';
+import { Sentence } from '../../features/sentences/Sentenc';
 import {RedirectBtn} from '../../utils/buttons/RedirectBtn';
 import {RedirectBtnProps} from '../../utils/interfaces/RedirectBtnProps';
 
@@ -8,6 +9,7 @@ export const DisplayResultMulti: React.FC<RedirectBtnProps> = ({pktG1, pktG2, se
       <div className='main-div'>
         <RedirectBtn to="/multi">Zagraj jeszcze raz</RedirectBtn>
           <h2 className="text__main blink-red">{result}</h2>
+          <Sentence/>
           <p style={{ marginBottom: '0.1rem' }}>Black vs Grey</p>
           <p style={{ marginBottom: '0.1rem' }}>{pktG1} : {pktG2}</p>
  

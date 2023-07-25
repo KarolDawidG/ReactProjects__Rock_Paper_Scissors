@@ -4,7 +4,6 @@ import { SingleChoice } from './SingleChoice';
 import { DisplayResult } from '../../views/single-views/DisplayResult';
 import { Algorithm } from './Algorithm';
 import { LevelBtn } from '../../utils/buttons/LevelBtn';
-
 const choicesHistory: number[] = [];
 
 export const MainLogic = () => {
