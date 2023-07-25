@@ -57,3 +57,13 @@
     transform: scale(1.1);
   }
 }
+
+@media (max-width: 600px) {
+
+  .top-right {
+    position: absolute;
+    bottom: 20px; /* Odległość od dolnego brzegu */
+    left: 50%; /* Ustawienie na 50% szerokości ekranu */
+    transform: translateX(-50%); /* Przesunięcie w lewo o 50% szerokości elementu, aby być wyśrodkowanym */
+  }
+}

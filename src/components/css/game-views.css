@@ -117,4 +117,10 @@
     max-width: none; /* Usunięcie maksymalnej szerokości */
     max-height: 40vh; /* Maksymalna wysokość wynosi 40% wysokości widoku */
   }
+  .top-right {
+    position: absolute;
+    bottom: 20px; 
+    left: 10%; 
+    transform: translateX(-50%); 
+  }
 }
