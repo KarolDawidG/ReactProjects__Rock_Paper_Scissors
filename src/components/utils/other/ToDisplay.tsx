@@ -1,17 +1,17 @@
 export const ToDisplay = (opcja: any) => {
     if (opcja === 1) {
       return {
-        nazwa: 'Papier',
+        nazwa: 'Paper',
         obrazek: 'sheet.png'
       };
     } else if (opcja === 2) {
       return {
-        nazwa: 'Nożyce',
+        nazwa: 'Scissors',
         obrazek: 's.png'
       };
     } else if (opcja === 3) {
       return {
-        nazwa: 'Kamień',
+        nazwa: 'Stone',
         obrazek: 'stone.png'
       };
     }

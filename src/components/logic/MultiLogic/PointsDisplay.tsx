@@ -24,7 +24,7 @@ export const PointsDisplay: React.FC = () => {
   if (pktG1 === null || pktG2 === null) {
     return (
       <div className="button-menu__options">
-        <p className="text__main blink-red">Rogrywka wkrotce sie rozpocznie...</p>
+        <p className="text__main blink-red">The gameplay will start soon...</p>
       </div>
     );
   }
@@ -32,7 +32,7 @@ export const PointsDisplay: React.FC = () => {
   if (!showPoints) {
     return (
       <div className="button-menu__options">
-        <p className="text__main blink-red">Rogrywka wkrotce sie rozpocznie...</p>
+        <p className="text__main blink-red">The gameplay will start soon...</p>
       </div>
     );
   }

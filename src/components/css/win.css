@@ -1,27 +1,37 @@
 /* win.css */
 .win-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 1px;
   background-color: #000;
   color: #fff;
+  height: 65vh; /* Całość zajmuje całą wysokość widoku przeglądarki */
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .win_main-title {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
   text-transform: uppercase;
   animation: neonGlow 1s linear infinite alternate;
 }
 
 .win_title {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 1px;
 }
 
 .win_score {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .win-main.player-win {
@@ -30,6 +40,11 @@
 
 .win-main.pc-win {
   color: #ff6f00;
+}
+
+.animatet-girl {
+  width: 200px;
+  height: 200px;
 }
 
 @keyframes neonGlow {

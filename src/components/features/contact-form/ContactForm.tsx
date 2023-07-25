@@ -59,7 +59,7 @@ export const ContactForm: React.FC = () => {
 
   return (
     <>
-      <RedirectBtn to="/">Strona Główna</RedirectBtn>
+      <RedirectBtn to="/">Home</RedirectBtn>
       <div className="form-container">
         <form className="contact-form" onSubmit={handleSubmit}>
           <h1 className="contact-form__title">CONTACT</h1>

@@ -7,7 +7,7 @@ export const DisplayResultMulti: React.FC<RedirectBtnProps> = ({pktG1, pktG2, se
   return (
     <>
       <div className='main-div'>
-        <RedirectBtn to="/multi">Zagraj jeszcze raz</RedirectBtn>
+        <RedirectBtn to="/multi">Play again</RedirectBtn>
           <h2 className="text__main blink-red">{result}</h2>
           <Sentence/>
           <p style={{ marginBottom: '0.1rem' }}>Black vs Grey</p>

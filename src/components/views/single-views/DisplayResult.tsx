@@ -12,9 +12,9 @@ export const DisplayResult: React.FC<DisplayProps> = ({setWynik, setOpcjaNumber,
 
     const renderMatch = (e: number, f:number) =>{
         if (e > 2) {
-            return <Win whoWin={'CZŁOWIEK'} regards={'Gratulacje!!!'} punkty={punkty} punktyPC={punktyPC}/>
+            return <Win whoWin={'Human'} regards={'Congratulations!!!'} punkty={punkty} punktyPC={punktyPC}/>
         } else if (f > 2){
-            return <Win whoWin={'PC'} regards={'Przykro nam!!!'} punkty={punkty} punktyPC={punktyPC}/>
+            return <Win whoWin={'ARTIFICIAL INTELLIGENCE'} regards={'We are sorry!!!'} punkty={punkty} punktyPC={punktyPC}/>
         }else{
             return (
                 <>
@@ -32,7 +32,10 @@ export const DisplayResult: React.FC<DisplayProps> = ({setWynik, setOpcjaNumber,
                         <p className="result__wygrana">{result}</p>
                         <img src={`img/${img}.jpg`} alt="Obrazek" className="game__girl-image" onClick={handlePlayAgain}/>
                     </div>
-                    <Points punkty={punkty} punktyPC={punktyPC}/>
+                    <div className='top-right'>
+                        <Points punkty={punkty} punktyPC={punktyPC}/>
+                    </div>
+                   
                 </>
             );
         }

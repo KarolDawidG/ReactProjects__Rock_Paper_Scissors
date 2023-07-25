@@ -7,7 +7,7 @@ export const SingleChoice: React.FC<SingleChoiceProps> = ({ handleGra, punkty, p
   return (
     <>
         <div id="index" className="game__container">
-          <p className="game__option-label">Wybierz opcję:</p>
+          <p className="game__option-label">Choose an option:</p>
           <ul className="game__options">
             <li>
               <button onClick={() => handleGra(1)}>
@@ -25,8 +25,8 @@ export const SingleChoice: React.FC<SingleChoiceProps> = ({ handleGra, punkty, p
               </button>
             </li>
           </ul>
-          <div className="game__score">
-            <Points punkty={punkty} punktyPC={punktyPC}/>
+          <div className='top-right'>
+                  <Points punkty={punkty} punktyPC={punktyPC}/>
           </div>
           <div className="game__reset">
             <button onClick={handleKasuj} className="game__reset-button">

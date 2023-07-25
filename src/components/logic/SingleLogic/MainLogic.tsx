@@ -78,7 +78,7 @@ export const MainLogic = () => {
         
       )}
       {wynik === 'przegrana' && <DisplayResult
-                result={'Przegrałeś'}
+                result={'You lost!'}
                 img={'sadGrey'}
                 punkty={punkty}
                 punktyPC={punktyPC}
@@ -89,7 +89,7 @@ export const MainLogic = () => {
                 setR={setR}
                   />}
       {wynik === 'remis' && <DisplayResult 
-                result={'Remis'}
+                result={'Draw!'}
                 img={'disGrey'}
                 punkty={punkty}
                 punktyPC={punktyPC}
@@ -100,7 +100,7 @@ export const MainLogic = () => {
                 setR={setR}
                   />}
       {wynik === 'wygrana' && <DisplayResult
-                result={'Wygrałeś'}
+                result={'You have won!'}
                 img={'happyGrey'} 
                 punkty={punkty}
                 punktyPC={punktyPC}

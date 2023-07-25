@@ -8,10 +8,10 @@ export const Points: React.FC<PointsTemplateProps> = ({  punkty, punktyPC}) => {
     <>
     <div id="wygrana">
         <p className="result__points">
-          Punkty: <span id="punkty">{punkty}</span>
+        Points: <span id="punkty">{punkty}</span>
         </p>
         <p className="result__points">
-          Punkty komputera: <span id="punktyPC">{punktyPC}</span>
+        AI Points: <span id="punktyPC">{punktyPC}</span>
         </p>
     </div>
     </>

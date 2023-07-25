@@ -5,7 +5,7 @@ import { RedirectBtn } from '../../utils/buttons/RedirectBtn';
 export const SinglePlayer = () => {
   return (
    <>
-        <RedirectBtn to="/">Strona Główna</RedirectBtn>
+        <RedirectBtn to="/">Home</RedirectBtn>
         <div className="page-wrapper">
         <MainLogic />
     </div>

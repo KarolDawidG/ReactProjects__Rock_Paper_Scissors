@@ -15,7 +15,7 @@
         <div className="menu">
           <div className="button-menu__options">
             <button className="game__reset-button" onClick={handleClick}>
-              Resetuj punkty
+              Reset points
             </button>
           </div>
         </div>

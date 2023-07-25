@@ -13,7 +13,7 @@ export const WhatToDisplay: React.FC<WhatToDisplayProps> = ({ setWynik, setOpcja
     <>
       <div id="wygrana"onClick={handlePlayAgain}>
         <p className='text'>
-          Wybrałeś {wyborGracza?.nazwa} zaś przeciwnik wybrał {wyborKomputera?.nazwa}!!
+          You chose {wyborGracza?.nazwa} and your opponent chose {wyborKomputera?.nazwa}!!
         </p>
           <div className='versus'>
               <img src={`/img/${wyborGracza?.obrazek}`} alt={wyborGracza?.nazwa} className="game__button-image-left" />

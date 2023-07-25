@@ -11,7 +11,7 @@ export const LevelBtn: React.FC<ResetPointsBtnProps> = ({handleLevelChange, leve
     <div className="menu">
       <div className="button-menu__options">
         <button className="game__reset-button" onClick={handleLevelChange}>
-        {level === 'easy' ? 'Zmień na HARD' : 'Zmień na EASY'}
+        {level === 'easy' ? 'Change to HARD' : 'Change to EASY'}
         </button>
       </div>
     </div>

@@ -3,7 +3,7 @@ import { CountdownCircle } from './CountdownCircle';
 
 export const Loading = () => {
   return <>
-        <p className='second-player-time'>Czas na decyzje!</p>
+        <p className='second-player-time'>Time to make decisions!</p>
         <CountdownCircle/>
   </>
 };

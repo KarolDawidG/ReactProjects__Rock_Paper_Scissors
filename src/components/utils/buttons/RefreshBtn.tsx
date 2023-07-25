@@ -10,7 +10,7 @@ export const RefreshBtn = () => {
 
   return (
     <div>
-      <button className="game__reset-button" onClick={refreshPage}>Jeszcze raz!</button>
+      <button className="game__reset-button" onClick={refreshPage}>Once again!</button>
     </div>
   );
 }

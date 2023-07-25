@@ -23,13 +23,13 @@ export const MultiPlayer = () => {
 
   return (
     <>
-      <RedirectBtn to="/">Strona Główna</RedirectBtn>
+      <RedirectBtn to="/">Home</RedirectBtn>
       <div id="index" className="game__container">
         {showNewView ? (
           <Loading/>
         ) : (
           <>
-          <p className="game__option-label">Pierwszy gracz</p>
+          <p className="game__option-label">First player</p>
             <Choice handleButtonClick={handleButtonClick} />
             <PointsDisplay />
           </>

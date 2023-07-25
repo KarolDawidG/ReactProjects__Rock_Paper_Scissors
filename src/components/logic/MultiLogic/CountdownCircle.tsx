@@ -4,9 +4,9 @@ import "../../css/CountdownCircle.css";
 const renderTime = ({ remainingTime }: { remainingTime: number }) => {
   return (
     <div className="timer">
-      <div className="text">Pozostało Ci</div>
+      <div className="text">You have just</div>
       <div className="value">{remainingTime} s</div>
-      <div className="text">Śpiesz się!</div>
+      <div className="text">Rush!</div>
     </div>
   );
 };

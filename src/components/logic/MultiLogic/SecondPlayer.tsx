@@ -46,8 +46,8 @@ export const SecondPlayer: React.FC<SecondPlayerProps> = () => {
           return <DisplayResultMulti 
                 pktG1={pktG1} 
                 pktG2={pktG2} 
-                sentence={'Nikt nie wygrał'} 
-                result={'Remis'} 
+                sentence={'Nobody won!'} 
+                result={'Draw'} 
                 img1={'disBlack'}
                 img2={'disGrey'}
             />;
@@ -55,8 +55,8 @@ export const SecondPlayer: React.FC<SecondPlayerProps> = () => {
             return <DisplayResultMulti 
                 pktG1={pktG1} 
                 pktG2={pktG2} 
-                sentence={'Gratulacje!'} 
-                result={'Grey zwycięża!'} 
+                sentence={'Congratulations!'} 
+                result={'Gray wins!'} 
                 img1={'sadBlack'}
                 img2={'happyGrey'}
           />;
@@ -64,8 +64,8 @@ export const SecondPlayer: React.FC<SecondPlayerProps> = () => {
             return <DisplayResultMulti 
                 pktG1={pktG1} 
                 pktG2={pktG2} 
-                sentence={'Gratulacje dla zwycięscy'} 
-                result={'Wygrywa Black!'} 
+                sentence={'Congratulations to the winner!'} 
+                result={'Black won decisively!'} 
                 img1={'happyBlack'}
                 img2={'sadGrey'}
           />;
@@ -73,7 +73,7 @@ export const SecondPlayer: React.FC<SecondPlayerProps> = () => {
     } else {
       return (
         <>
-          <p className="game__option-label">Drugi gracz</p>
+          <p className="game__option-label">Second player</p>
           <Choice handleButtonClick={handleButtonClick} />
         </>
       );
@@ -82,7 +82,7 @@ export const SecondPlayer: React.FC<SecondPlayerProps> = () => {
 
   return (
     <>
-      <RedirectBtn to="/">Strona Główna</RedirectBtn>
+      <RedirectBtn to="/">Home</RedirectBtn>
       <div id="index" className="game__container">
         {renderView()}
       </div>

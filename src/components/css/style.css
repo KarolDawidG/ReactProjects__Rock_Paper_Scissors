@@ -25,14 +25,14 @@ body {
 }
 
 .header__title {
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
-  margin: 0;
+  margin: 1px;
 }
 
 /* Zawartość główna */
 .main {
-  padding: 10px;
+  padding: 1px;
   text-align: center;
 }
 
@@ -63,27 +63,27 @@ body {
   color: #fff;
   font-size: 24px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 2px;
 }
 
 /* Lista opcji */
 .game__options {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 1px;
   text-align: center;
-  display: flex; /* Dodane */
-  justify-content: center; /* Dodane */
+  display: flex; 
+  justify-content: center; 
 }
 
 /* Pojedyncza opcja */
 .game__option {
-  margin: 10px;
+  margin: 1px;
 }
 
 /* Przycisk */
 .game__button {
-  padding: 10px 20px;
+  padding: 2px 5px;
   font-size: 18px;
   background-color: #ff4081;
   color: #fff;
@@ -103,13 +103,13 @@ body {
 .game__points {
   font-size: 16px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 /* Reset */
 .game__reset {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 
@@ -123,7 +123,12 @@ body {
   height: 228px;
 }
 
-
+.top-right {
+  position: absolute; 
+  margin: 10px;
+  top: 80px; 
+  left: 30px; 
+}
 
 
 @media (max-width: 100vw) {
