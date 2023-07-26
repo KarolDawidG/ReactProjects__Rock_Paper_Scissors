@@ -31,8 +31,8 @@ export const ContactForm: React.FC = () => {
     e.preventDefault();
 
     try {
-      // const response = await axios.post('https://rock-paper-scissors.ct8.pl/form', formState);
-      const response = await axios.post('http://localhost:3001/form', formState);
+      const response = await axios.post('https://rock-paper-scissors.ct8.pl/form', formState);
+      // const response = await axios.post('http://localhost:3001/form', formState);
 
       if (response.status === 200 && response.data === 'success') {
         setFormState({ name: '', email: '', subject: '', message: '' });
