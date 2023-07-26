@@ -31,8 +31,8 @@ export const ContactForm: React.FC = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://rock-paper-scissors.ct8.pl/form', formState);
-      // const response = await axios.post('http://localhost:3001/form', formState);
+      // const response = await axios.post('https://rock-paper-scissors.ct8.pl/form', formState);
+      const response = await axios.post('http://localhost:3001/form', formState);
 
       if (response.status === 200 && response.data === 'success') {
         setFormState({ name: '', email: '', subject: '', message: '' });
@@ -43,7 +43,7 @@ export const ContactForm: React.FC = () => {
       }
     } catch (error) {
       console.log(error);
-      showAlert('Something went wrong! Check the console.', 'error', setAlert);
+      showAlert('Something went wrong! Check the console (catch).', 'error', setAlert);
     }
   };
 
@@ -57,6 +57,11 @@ export const ContactForm: React.FC = () => {
     }
   };
 
+  const validateEmail = (e: string) => {
+    const email = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+    return email.test(e);
+  };
+
   return (
     <>
       <RedirectBtn to="/">Home</RedirectBtn>
@@ -68,78 +73,77 @@ export const ContactForm: React.FC = () => {
             <label htmlFor="name" className="contact-form__label">
               Nick Name
             </label>
-            <input
-              type="text"
-              id="name"
-              className="contact-form__input"
-              minLength={4}
-              maxLength={16}
-              placeholder="Adam Smith"
-              name="name"
-              value={formState.name}
-              onChange={handleChange}
-              style={{backgroundColor: `${backgroundColor(formState.name.length, 4)}`}}
-              onKeyDown={preventSpace}
-              required
-            />
+              <input
+                type="text"
+                id="name"
+                className="contact-form__input"
+                minLength={4}
+                maxLength={16}
+                placeholder="Adam Smith"
+                name="name"
+                value={formState.name}
+                onChange={handleChange}
+                style={{backgroundColor: `${backgroundColor(formState.name.length, 4)}`}}
+                onKeyDown={preventSpace}
+                required
+              />
           </div>
 
           <div className="contact-form__input-container">
             <label htmlFor="email" className="contact-form__label">
               Email
             </label>
-            <input
-              type="email"
-              id="email"
-              className="contact-form__input"
-              placeholder="example@mail.com"
-              name="email"
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-              style={{backgroundColor: `${formState.email.match(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/) ? 'lightgreen' : 'lightgrey'}`}}
-              value={formState.email}
-              onChange={handleChange}
-              onKeyDown={preventSpace}
-              required
-            />
+              <input
+                type="email"
+                id="email"
+                className="contact-form__input"
+                placeholder="example@mail.com"
+                name="email"
+                style={{ backgroundColor: validateEmail(formState.email) ? 'lightgreen' : 'lightgrey' }}
+                value={formState.email}
+                onChange={handleChange}
+                onKeyDown={preventSpace}
+                required
+              />
           </div>
 
           <div className="contact-form__input-container">
             <label htmlFor="subject" className="contact-form__label">
               Subject
             </label>
-            <input
-              type="text"
-              id="subject"
-              className="contact-form__input"
-              minLength={6}
-              maxLength={30}
-              style={{backgroundColor: `${backgroundColor(formState.subject.length, 6)}`}}
-              placeholder="Great projects!!!"
-              name="subject"
-              value={formState.subject}
-              onChange={handleChange}
-              required
-            />
+              <input
+                type="text"
+                id="subject"
+                className="contact-form__input"
+                minLength={6}
+                maxLength={30}
+                style={{backgroundColor: `${backgroundColor(formState.subject.length, 6)}`}}
+                placeholder="Great projects!!!"
+                name="subject"
+                value={formState.subject}
+                onChange={handleChange}
+                required
+              />
           </div>
 
           <div className="contact-form__input-container">
             <label htmlFor="message" className="contact-form__label">
               Message
             </label>
-            <textarea
-              id="message"
-              className="contact-form__textarea"
-              cols={15}
-              rows={5}
-              placeholder="We invite you to cooperate!!!"
-              name="message"
-              minLength={10}
-              maxLength={300}
-              style={{backgroundColor: `${backgroundColor(formState.message.length, 10)}`}}
-              value={formState.message}
-              onChange={handleChange}
-              required
-            ></textarea>
+              <textarea
+                id="message"
+                className="contact-form__textarea"
+                cols={15}
+                rows={5}
+                placeholder="We invite you to cooperate!!!"
+                name="message"
+                minLength={10}
+                maxLength={300}
+                style={{backgroundColor: `${backgroundColor(formState.message.length, 10)}`}}
+                value={formState.message}
+                onChange={handleChange}
+                required
+              ></textarea>
           </div>
 
           <input type="submit" className="contact-form__submit-btn" value="Send Message" />
